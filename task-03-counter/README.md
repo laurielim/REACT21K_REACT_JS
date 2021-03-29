@@ -19,6 +19,20 @@ Inside a cloned directory/folder, run:
 npm install
 ```
 
+## Screenshots
+
+### Counter is Zero
+
+![Screenshot of App when Counter is Zero](./app_screenshots/Counter_Zero_Screenshot_Counter_React_App.png)
+
+### Counter is Even
+
+![Screenshot of App when Counter is Even](./app_screenshots/Counter_Even_Screenshot_Counter_React_App.png)
+
+### Counter is Odd
+
+![Screenshot of App when Counter is Odd](./app_screenshots/Counter_Odd_Screenshot_Counter_React_App.png)
+
 ## Acknowledgment
 
 Mentor: Margit Tennosaar
