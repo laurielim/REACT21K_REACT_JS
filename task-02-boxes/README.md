@@ -17,6 +17,7 @@ Inside a cloned directory/folder, run:
 
 ```bash
 npm install
+npm install react-router-dom
 ```
 
 ## Sources
