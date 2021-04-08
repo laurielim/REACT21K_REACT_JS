@@ -15,10 +15,7 @@ class App extends Component {
   };
 
   clickHandler = () => {
-    this.setState((prevState) => ({
-      circles: [...prevState.circles],
-      score: prevState.score + 1,
-    }));
+    this.setState((prevState) => ({ score: prevState.score + 1 }));
   };
 
   render() {
