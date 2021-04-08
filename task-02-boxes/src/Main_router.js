@@ -1,6 +1,7 @@
 import React from "react";
 
 import Boxes from "./Boxes";
+import Animals from "./Animals";
 import { Switch, Route, Link } from "react-router-dom";
 
 const Home = () => {
@@ -30,6 +31,9 @@ const Nav = () => {
         <li>
           <Link to="/boxes">Boxes</Link>
         </li>
+        <li>
+          <Link to="/animals">Animals</Link>
+        </li>
       </ul>
     </nav>
   );
@@ -43,6 +47,7 @@ const Main_router = () => {
         <Route exact path="/" component={Home} />
         <Route path="/gallery" component={Gallery} />
         <Route path="/boxes" component={Boxes} />
+        <Route path="/animals" component={Animals} />
       </Switch>
     </div>
   );
