@@ -29,7 +29,7 @@ const Main = () => {
 */
 
 // Class Component
-class Main extends Component {
+class Boxes extends Component {
   state = {
     persons: [
       { name: "Ron Weasley", age: 16, title: "Student" },
@@ -82,4 +82,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default Boxes;
