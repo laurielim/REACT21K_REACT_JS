@@ -6,6 +6,8 @@ const AnimalCard = (props) => {
     <div className="box animal-card">
       <h2>{props.name}</h2>
       <img src={props.img} alt={altText} />
+
+      <button>Click Me</button>
     </div>
   );
 };
@@ -13,9 +15,15 @@ const AnimalCard = (props) => {
 class Animals extends Component {
   state = {
     animals: [
-      { name: "Fox", img: "" },
-      { name: "Rabbit", img: "" },
-      { name: "Wolf", img: "" },
+      { name: "Fox", img: "https://source.unsplash.com/xUUZcpQlqpM/1600x1000" },
+      {
+        name: "Rabbit",
+        img: "https://source.unsplash.com/um1BsyEVB5U/1600x1000",
+      },
+      {
+        name: "Wolf",
+        img: "https://source.unsplash.com/WFPWB7Vum1E/1600x1000",
+      },
     ],
   };
 

@@ -12,3 +12,12 @@ ul {
   padding: 0;
   list-style-type: none;
 }
+
+.animal-card {
+  height: auto;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
