@@ -1,6 +1,8 @@
 # Boxes
 
-This React App was created as the 2nd task for React.js as part of the Full Stack Web Development Program at [Business College Helsinki](https://en.bc.fi/qualifications/full-stack-web-developer-program/).
+This React App was for the 2nd task for React.js as part of the Full Stack Web Development Program at [Business College Helsinki](https://en.bc.fi/qualifications/full-stack-web-developer-program/).
+
+It was subsequently used to try out different elements learnt throughout the course.
 
 ## Technologies used
 
@@ -20,14 +22,9 @@ npm install
 npm install react-router-dom
 ```
 
-## Sources
+## Acknowledgment
 
-- [GitHub Guides - masterin markdown](https://guides.github.com/features/mastering-markdown/)
-- [Make a README](https://www.makeareadme.com/)
-
-## Authors and acknowledgment
-
-Margit Tennosaar
+Mentor: Margit Tennosaar
 
 - GitHub @margittennosaar
 - [LinkedIn](https://www.linkedin.com/in/margittennosaar/)
