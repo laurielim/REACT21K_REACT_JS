@@ -7,22 +7,36 @@ class App extends Component {
   state = {
     circles: [
       { id: 1, pokemon: "bulbasaur" },
-      { id: 1, pokemon: "charmander" },
-      { id: 1, pokemon: "squirtle" },
-      { id: 1, pokemon: "pikachu" },
+      { id: 2, pokemon: "charmander" },
+      { id: 3, pokemon: "squirtle" },
+      { id: 4, pokemon: "pikachu" },
     ],
+    score: 0,
   };
+
+  clickHandler = () => {
+    this.setState((prevState) => ({
+      circles: [...prevState.circles],
+      score: prevState.score + 1,
+    }));
+  };
+
   render() {
     const circles = this.state.circles.map((circle) => {
-      return <Circle id={circle.id} pokemon={circle.pokemon} key={circle.id} />;
+      return (
+        <Circle
+          key={circle.id}
+          id={circle.id}
+          pokemon={circle.pokemon}
+          click={this.clickHandler}
+        />
+      );
     });
 
     return (
       <div className="container">
         <h1>Speed Game</h1>
-        <p>
-          Your Score: <span id="score">0</span>
-        </p>
+        <p>Your Score: {this.state.score}</p>
         <div className="circles">{circles}</div>
         <div className="buttons">
           <button className="btn-text" id="start" type="submit">

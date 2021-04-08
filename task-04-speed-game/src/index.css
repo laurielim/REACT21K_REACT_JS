@@ -31,73 +31,6 @@ h1 {
   margin-bottom: 1rem;
 }
 
-/**************** Game Buttons ****************/
-
-.circles {
-  width: 100%;
-  margin: 2rem auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: white;
-  border: 1px solid black;
-  margin: 1rem;
-  cursor: pointer;
-}
-
-.circle:active,
-.circle:focus {
-  outline: none;
-}
-
-.bulbasaur {
-  background-image: url("./img/bulbasaur.png");
-}
-.charmander {
-  background-image: url("./img/charmander.png");
-}
-
-.squirtle {
-  background-image: url("./img/squirtle.png");
-}
-
-.pikachu {
-  background-image: url("./img/pikachu.png");
-}
-
-/* .active {
-  background-color: tomato;
-} */
-
-.inactive {
-  background-image: radial-gradient(
-      white 10%,
-      black 11%,
-      black 15%,
-      transparent 16%
-    ),
-    linear-gradient(0deg, white 45%, black 45%, black 55%, red 55%);
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  width: 200px;
-}
-
-#start,
-#stop {
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 /**************** Game Over Overlay ****************/
 
 #overlay {
@@ -154,9 +87,5 @@ h2 {
   .container {
     justify-content: start;
     margin-top: 5vh;
-  }
-
-  .responsive {
-    display: block;
   }
 }
