@@ -8,15 +8,13 @@ Built with:
 
 - React
 
-## Setup and usage
-
 ## Sources
 
 - Source for helper functions are included in the comments where they are used.
 
-## Authors and acknowledgment
+## Acknowledgment
 
-Margit Tennosaar
+Mentor: Margit Tennosaar
 
 - [GitHub](https://github.com/margittennosaar) @margittennosaar
 - [LinkedIn](https://www.linkedin.com/in/margittennosaar/)
