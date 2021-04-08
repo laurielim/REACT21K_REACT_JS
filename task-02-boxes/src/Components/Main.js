@@ -39,7 +39,7 @@ const Nav = () => {
   );
 };
 
-const Main_router = () => {
+const Main = () => {
   return (
     <div>
       <Nav />
@@ -53,4 +53,4 @@ const Main_router = () => {
   );
 };
 
-export default Main_router;
+export default Main;
