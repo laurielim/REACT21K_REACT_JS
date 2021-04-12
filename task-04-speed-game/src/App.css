@@ -24,18 +24,18 @@
 }
 
 .bulbasaur {
-  background-image: url("./img/bulbasaur.png");
+  background-image: url("./assets/img/bulbasaur.png");
 }
 .charmander {
-  background-image: url("./img/charmander.png");
+  background-image: url("./assets/img/charmander.png");
 }
 
 .squirtle {
-  background-image: url("./img/squirtle.png");
+  background-image: url("./assets/img/squirtle.png");
 }
 
 .pikachu {
-  background-image: url("./img/pikachu.png");
+  background-image: url("./assets/img/pikachu.png");
 }
 
 .inactive {

@@ -1,8 +1,15 @@
 import React, { Component } from "react";
 
-import "./App.css";
 import Circle from "./Components/Circle";
 import GameOverOverlay from "./Components/GameOverOverlay";
+
+import "./App.css";
+
+import bgMusic from "./assets/sounds/bg-music.mp3";
+import gameOverMusic from "./assets/sounds/game-over.mp3";
+
+let gameStartSound = new Audio(bgMusic);
+let gameEndSound = new Audio(gameOverMusic);
 
 class App extends Component {
   state = {
@@ -15,18 +22,30 @@ class App extends Component {
     score: 0,
     current: 0,
     showGameOver: false,
+    rounds: 0,
+    gameStart: false,
   };
 
   timer = undefined;
   pace = 1500;
 
-  clickHandler = () => {
+  clickHandler = (id) => {
+    if (this.state.current !== id) {
+      this.endHandler();
+      return;
+    }
+
     this.setState({
       score: this.state.score + 1,
+      rounds: 0,
     });
   };
 
   nextCircle = () => {
+    if (this.state.rounds >= 5) {
+      this.endHandler();
+      return;
+    }
     const getRandomNumber = (currentActive) => {
       let nextActive;
       do {
@@ -38,6 +57,7 @@ class App extends Component {
 
     this.setState({
       current: getRandomNumber(this.state.current),
+      rounds: this.state.rounds + 1,
     });
 
     this.pace *= 0.95;
@@ -47,11 +67,15 @@ class App extends Component {
   };
 
   startHandler = () => {
+    this.setState({ gameStart: true });
+    gameStartSound.play();
     this.nextCircle();
   };
 
   endHandler = () => {
     clearTimeout(this.timer);
+    gameStartSound.pause();
+    gameEndSound.play();
     this.setState({ showGameOver: true });
   };
 
@@ -62,8 +86,11 @@ class App extends Component {
           key={circle.id}
           id={circle.id}
           pokemon={circle.pokemon}
-          click={this.clickHandler}
+          click={() => {
+            this.clickHandler(circle.id);
+          }}
           active={this.state.current === circle.id}
+          disabled={!this.state.gameStart}
         />
       );
     });
@@ -75,6 +102,7 @@ class App extends Component {
         <div className="circles">{circles}</div>
         <div className="buttons">
           <button
+            disabled={this.state.gameStart}
             onClick={this.startHandler}
             className="btn-text"
             id="start"
@@ -83,6 +111,7 @@ class App extends Component {
             Start
           </button>
           <button
+            disabled={!this.state.gameStart}
             onClick={this.endHandler}
             className="btn-text"
             id="stop"

@@ -7,6 +7,7 @@ const Circle = (props) => {
       onClick={props.click}
       className={classList}
       value={props.id}
+      disabled={props.disabled}
     ></button>
   );
 };
