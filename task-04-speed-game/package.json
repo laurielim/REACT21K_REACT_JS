@@ -1,5 +1,6 @@
 {
   "name": "task-04-speed-game",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
