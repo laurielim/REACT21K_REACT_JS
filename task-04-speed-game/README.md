@@ -10,6 +10,7 @@ Built with:
 - JS
 - CSS
 - Reactjs
+- Netlify
 
 ## Setup and usage
 
