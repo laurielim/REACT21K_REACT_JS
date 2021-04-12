@@ -1,6 +1,6 @@
 # Speed Game
 
-This React App was created as the 4th task for React.js as part of the Full Stack Web Development Program at [Business College Helsinki](https://en.bc.fi/qualifications/full-stack-web-developer-program/).
+This React App was created as the 4th task for React.js as part of the Full Stack Web Development Program at [Business College Helsinki](https://en.bc.fi/qualifications/full-stack-web-developer-program/). You can see a [live demo here](https://laurielim-react-speed-game.netlify.app/).
 
 ## Technologies used
 
