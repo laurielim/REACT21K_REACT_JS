@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import "./App.css";
 import Circle from "./Components/Circle";
+import GameOverOverlay from "./Components/GameOverOverlay";
 
 class App extends Component {
   state = {
@@ -13,6 +14,7 @@ class App extends Component {
     ],
     score: 0,
     current: 0,
+    showGameOver: false,
   };
 
   timer = undefined;
@@ -28,7 +30,7 @@ class App extends Component {
     const getRandomNumber = (currentActive) => {
       let nextActive;
       do {
-        nextActive = Math.floor(Math.random() * 4);
+        nextActive = Math.floor(Math.random() * 4) + 1;
       } while (currentActive === nextActive);
 
       return nextActive;
@@ -50,6 +52,7 @@ class App extends Component {
 
   endHandler = () => {
     clearTimeout(this.timer);
+    this.setState({ showGameOver: true });
   };
 
   render() {
@@ -60,6 +63,7 @@ class App extends Component {
           id={circle.id}
           pokemon={circle.pokemon}
           click={this.clickHandler}
+          active={this.state.current === circle.id}
         />
       );
     });
@@ -87,6 +91,9 @@ class App extends Component {
             Stop
           </button>
         </div>
+        {this.state.showGameOver && (
+          <GameOverOverlay finalScore={this.state.score} />
+        )}
       </div>
     );
   }
