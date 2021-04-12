@@ -68,6 +68,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   display: grid;
@@ -82,6 +83,7 @@
   max-width: 600px;
   display: grid;
   place-content: center;
+  gap: 1rem;
   position: relative;
   padding: 2%;
 }

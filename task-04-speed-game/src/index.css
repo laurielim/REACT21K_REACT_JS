@@ -28,3 +28,9 @@ h1 {
   text-shadow: -4px 0 #3c5aa6, 0 4px #3c5aa6, 4px 0 #3c5aa6, 0 -4px #3c5aa6;
   margin-bottom: 1rem;
 }
+
+@media (max-width: 576) {
+  html {
+    font-size: 13px;
+  }
+}
