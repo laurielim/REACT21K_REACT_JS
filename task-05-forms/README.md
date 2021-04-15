@@ -23,6 +23,20 @@ Inside a cloned directory/folder, run:
 npm install
 ```
 
+## Screenshots
+
+### Form Component
+
+![Screenshot of Form Component](./app_screenshots/form-component.png)
+
+### View Component
+
+![Screenshot of View Component](./app_screenshots/view-component.png)
+
+### Popup Component
+
+![Screenshot of App wPopup Component](./app_screenshots/popup-component.png)
+
 ## Acknowledgment
 
 Mentor: Margit Tennosaar
