@@ -1,52 +1,45 @@
 import React, { Component } from "react";
 
-const AnimalCard = (props) => {
-  let altText = `Photograph of a ${props.name} from Unsplash`;
-  return (
-    <div className="box animal-card">
-      <h2>{props.name}</h2>
-      <img src={props.img} alt={altText} />
-      <button onClick={props.clickMe}>Click Me</button>
-    </div>
-  );
-};
+import AnimalCard from "./AnimalCard";
+import { animals } from "./animalList";
+import SearchBox from "./SearchBox";
 
 class Animals extends Component {
   state = {
-    animals: [
-      {
-        id: 1,
-        name: "Fox",
-        img: "https://source.unsplash.com/xUUZcpQlqpM/1600x1000",
-      },
-      {
-        id: 2,
-        name: "Rabbit",
-        img: "https://source.unsplash.com/um1BsyEVB5U/1600x1000",
-      },
-      {
-        id: 3,
-        name: "Wolf",
-        img: "https://source.unsplash.com/WFPWB7Vum1E/1600x1000",
-      },
-    ],
+    animals: animals,
+    searchInput: "",
   };
 
   clickHandler = (name) => alert(`What does the ${name} say?`);
 
+  searchValueHandler = (event) => {
+    this.setState({ searchInput: event.target.value });
+    console.log(event.target.value);
+  };
+
   render() {
-    const animalsList = this.state.animals.map((animal) => {
+    const animalFilter = this.state.animals.filter((animal) => {
+      return animal.name
+        .toLocaleLowerCase()
+        .includes(this.state.searchInput.toLocaleLowerCase());
+    });
+
+    const animalsList = animalFilter.map((animal) => {
       return (
         <AnimalCard
-          key={animal.id}
+          key={animal.name}
           name={animal.name}
-          img={animal.img}
           clickMe={() => this.clickHandler(animal.name)}
         />
       );
     });
 
-    return <main>{animalsList}</main>;
+    return (
+      <main>
+        <SearchBox search={this.searchValueHandler} />
+        {animalsList}
+      </main>
+    );
   }
 }
 

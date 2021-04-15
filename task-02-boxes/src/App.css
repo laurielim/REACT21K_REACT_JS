@@ -1,7 +1,8 @@
 .box {
   display: inline-block;
-  height: 200px;
-  width: 300px;
+  min-height: 200px;
+  width: 80%;
+  max-width: 300px;
   background-color: #cfc7b4;
   border-radius: 5px;
   margin: 1rem;
