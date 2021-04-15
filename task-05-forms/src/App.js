@@ -1,7 +1,17 @@
-import "./App.css";
+import React, { Component } from "react";
+import Form from "./Components/Form";
+import View from "./Components/View";
 
-function App() {
-  return <div className="App"></div>;
+class App extends Component {
+  state = {};
+  render() {
+    return (
+      <div className="container">
+        <Form />
+        <View />
+      </div>
+    );
+  }
 }
 
 export default App;
