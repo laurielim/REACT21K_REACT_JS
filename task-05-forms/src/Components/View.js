@@ -4,11 +4,24 @@ const View = (props) => {
   return (
     <section className="view-container">
       <h2>This is your input:</h2>
-      <p>{props.firstName}</p>
-      <p>{props.lastName}</p>
-      <p>{props.phoneNumber}</p>
-      <p>{props.role}</p>
-      <p>{props.message}</p>
+      <div className="copybook">
+        <p>
+          First Name: <span className="handwritting">{props.firstName}</span>
+        </p>
+        <p>
+          Last Name: <span className="handwritting">{props.lastName}</span>
+        </p>
+        <p>
+          Phone Number:{" "}
+          <span className="handwritting">{props.phoneNumber}</span>
+        </p>
+        <p>
+          Role: <span className="handwritting">{props.role}</span>
+        </p>
+        <p>
+          Message: <span className="handwritting">{props.message}</span>
+        </p>
+      </div>
     </section>
   );
 };

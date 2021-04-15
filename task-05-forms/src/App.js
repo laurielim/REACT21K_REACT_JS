@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+
+import "./App.css";
+
 import Form from "./Components/Form";
 import View from "./Components/View";
 import Popup from "./Components/Popup";
@@ -37,14 +40,16 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <Form input={this.inputHandler} submit={this.showPopupHandler} />
-        <View
-          firstName={this.state.form.firstName}
-          lastName={this.state.form.lastName}
-          phoneNumber={this.state.form.phoneNumber}
-          role={this.state.form.role}
-          message={this.state.form.message}
-        />
+        <main>
+          <Form input={this.inputHandler} submit={this.showPopupHandler} />
+          <View
+            firstName={this.state.form.firstName}
+            lastName={this.state.form.lastName}
+            phoneNumber={this.state.form.phoneNumber}
+            role={this.state.form.role}
+            message={this.state.form.message}
+          />
+        </main>
         {this.state.showPopup && (
           <Popup
             firstName={this.state.form.firstName}

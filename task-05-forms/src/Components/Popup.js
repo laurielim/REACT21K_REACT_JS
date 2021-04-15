@@ -3,16 +3,23 @@ import React from "react";
 const Popup = (props) => {
   const reloadApp = () => window.location.reload();
   return (
-    <section className="popup">
-      <h2>Confirm your info</h2>
-      <p>{props.firstName}</p>
-      <p>{props.lastName}</p>
-      <p>{props.phoneNumber}</p>
-      <p>{props.role}</p>
-      <p>{props.message}</p>
-      <button onClick={props.backBtn}>Go back </button>
-      <button onClick={reloadApp}>Send </button>
-    </section>
+    <div className="overlay">
+      <section className="popup-container">
+        <h2>Confirm Your Details</h2>
+        <p>First Name: {props.firstName}</p>
+        <p>Last Name: {props.lastName}</p>
+        <p>Phone Number: {props.phoneNumber}</p>
+        <p>Role: {props.role}</p>
+        <p>Message: {props.message}</p>
+
+        <button onClick={reloadApp} className="submit-btn">
+          Send{" "}
+        </button>
+        <button onClick={props.backBtn} className="cancel-btn">
+          Go back{" "}
+        </button>
+      </section>
+    </div>
   );
 };
 
