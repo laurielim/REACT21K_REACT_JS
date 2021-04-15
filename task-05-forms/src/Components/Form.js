@@ -36,6 +36,7 @@ const Form = (props) => {
           <label htmlFor="role">Role:</label>
 
           <select onChange={props.input} name="role" id="role" form="form">
+            <option value="">None</option>
             <option value="student">Student</option>
             <option value="teacher">Teacher</option>
           </select>
