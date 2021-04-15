@@ -3,7 +3,7 @@ import React from "react";
 const Form = (props) => {
   return (
     <section className="form-container">
-      <form id="form">
+      <form id="form" onSubmit={props.submit}>
         <div className="user-input">
           <label htmlFor="firstName">First Name:</label>
           <input
@@ -11,6 +11,8 @@ const Form = (props) => {
             type="text"
             id="firstName"
             name="firstName"
+            placeholder="Jane"
+            required
           />
         </div>
         <div className="user-input">
@@ -20,25 +22,35 @@ const Form = (props) => {
             type="text"
             id="lastName"
             name="lastName"
+            placeholder="Smith"
+            required
           />
         </div>
         <div className="user-input">
           <label htmlFor="phoneNumber">Phone Number</label>
           <input
             onChange={props.input}
-            type="text"
+            type="tel"
             id="phoneNumber"
             name="phoneNumber"
             pattern="\+?\s*([0-9][\s-]*){1,15}$"
+            placeholder="+358 9 xxx xxx"
+            required
           />
         </div>
         <div className="user-input">
           <label htmlFor="role">Role:</label>
 
-          <select onChange={props.input} name="role" id="role" form="form">
+          <select
+            onChange={props.input}
+            name="role"
+            id="role"
+            form="form"
+            required
+          >
             <option value="">None</option>
-            <option value="student">Student</option>
-            <option value="teacher">Teacher</option>
+            <option value="Student">Student</option>
+            <option value="Teacher">Teacher</option>
           </select>
         </div>
         <div className="user-input">
@@ -47,8 +59,11 @@ const Form = (props) => {
             onChange={props.input}
             name="message"
             id="message"
+            placeholder="Write a message"
+            required
           ></textarea>
         </div>
+        <button type="submit">Submit</button>
       </form>
     </section>
   );
