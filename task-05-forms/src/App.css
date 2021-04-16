@@ -1,130 +1,135 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 
 section * + * {
-  margin-top: 1rem;
+	margin-top: 1rem;
 }
 
 main {
-  width: 100%;
-  max-width: 800px;
-  margin: 2rem auto;
+	width: 100%;
+	max-width: 800px;
+	margin: 2rem auto;
 }
 /******************* Form *******************/
 
 .form-container {
-  background-color: rgb(14, 56, 94);
+	background-color: rgb(14, 56, 94);
 }
 
 form {
-  display: grid;
-  grid-template-columns: [labels] 1fr [controls] 3fr;
-  grid-auto-flow: row;
-  gap: 0.8em;
-  /* padding: em; */
+	display: grid;
+	grid-template-columns: [labels] 1fr [controls] 3fr;
+	grid-auto-flow: row;
+	gap: 0.8em;
+	/* padding: em; */
 }
 
 input,
 select,
 textarea,
 button {
-  font-size: inherit;
-  font-family: inherit;
-  grid-column: controls;
-  grid-row: auto;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+	font-size: inherit;
+	font-family: inherit;
+	grid-column: controls;
+	grid-row: auto;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
 }
 
 .submit-btn {
-  background-color: olivedrab;
-  color: #fafafa;
+	background-color: olivedrab;
+	color: #fafafa;
 }
 
 .submit-btn:hover {
-  opacity: 0.9;
+	opacity: 0.9;
 }
 
 label {
-  grid-column: labels;
-  grid-row: auto;
-  color: #fafafa;
+	grid-column: labels;
+	grid-row: auto;
+	color: #fafafa;
 }
 
 label:first-child {
-  margin-top: 1rem;
+	margin-top: 1rem;
 }
 
 /******************* View *******************/
 
 .view-container {
-  background-color: whitesmoke;
+	background-color: whitesmoke;
 }
 
 .copybook {
-  background-color: papayawhip;
-  padding: 2rem 0;
-  position: relative;
-  width: 100%;
-  box-shadow: 0 1rem 1rem rgba(51, 51, 51, 0.5);
+	background-color: papayawhip;
+	padding: 2rem 0;
+	position: relative;
+	width: 100%;
+	box-shadow: 0 1rem 1rem rgba(51, 51, 51, 0.5);
 }
 
 .copybook::before {
-  position: absolute;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 3px;
-  border-left: 2px solid #ffaa9f;
-  border-right: 2px solid #ffaa9f;
-  top: 0;
-  left: 7%;
+	position: absolute;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 3px;
+	border-left: 2px solid #ffaa9f;
+	border-right: 2px solid #ffaa9f;
+	top: 0;
+	left: 7%;
 }
 .copybook p {
-  border-bottom: 1px dotted;
-  line-height: 2rem;
-  padding-left: 10%;
-  width: 100%;
+	border-bottom: 1px dotted;
+	line-height: 2rem;
+	padding-left: 10%;
+	width: 100%;
 }
 
 .handwritting {
-  font-family: "Caveat", cursive;
-  font-size: 1.5rem;
+	font-family: "Caveat", cursive;
+	font-size: 1.5rem;
 }
 
 /******************* Popup *******************/
 
 .overlay {
-  background-color: rgba(51, 51, 51, 0.8);
-  position: fixed;
-  top: 0;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  place-content: center;
+	background-color: rgba(51, 51, 51, 0.8);
+	position: fixed;
+	top: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	place-content: center;
 }
 
 .popup-container {
-  width: 100%;
-  min-width: 320px;
-  max-width: 800px;
-  background-color: whitesmoke;
-  padding: 3rem;
+	width: 100%;
+	min-width: 320px;
+	max-width: 800px;
+	background-color: whitesmoke;
+	padding: 3rem;
 }
 
 .popup-container button {
-  display: inline-block;
-  float: right;
+	float: right;
+}
+
+.popup-container :focus {
+	outline: 2px dashed black;
+	outline-offset: 2px;
 }
 
 .cancel-btn {
-  margin-right: 1rem;
-  background-color: transparent;
-  border: 1px solid transparent;
+	margin-right: 1rem;
+	background-color: transparent;
+	border: 1px solid transparent;
 }
 
-.cancel-btn:hover {
-  color: olivedrab;
-  border: 1px solid olivedrab;
+.cancel-btn:hover,
+.cancel-btn:focus {
+	color: olivedrab;
+	border: 1px solid olivedrab;
 }
