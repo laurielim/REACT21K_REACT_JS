@@ -10,7 +10,9 @@ main {
 	margin: 2rem auto;
 }
 /******************* Form *******************/
-
+h1 {
+	color: #fafafa;
+}
 .form-container {
 	background-color: rgb(14, 56, 94);
 }
@@ -20,7 +22,6 @@ form {
 	grid-template-columns: [labels] 1fr [controls] 3fr;
 	grid-auto-flow: row;
 	gap: 0.8em;
-	/* padding: em; */
 }
 
 input,
@@ -38,7 +39,6 @@ button {
 
 .submit-btn {
 	background-color: olivedrab;
-	color: #fafafa;
 }
 
 .submit-btn:hover {
@@ -75,8 +75,8 @@ label:first-child {
 	display: block;
 	height: 100%;
 	width: 3px;
-	border-left: 2px solid #ffaa9f;
-	border-right: 2px solid #ffaa9f;
+	border-left: 2px solid salmon;
+	border-right: 2px solid salmon;
 	top: 0;
 	left: 7%;
 }
@@ -122,14 +122,14 @@ label:first-child {
 	outline-offset: 2px;
 }
 
-.cancel-btn {
+.back-btn {
 	margin-right: 1rem;
 	background-color: transparent;
 	border: 1px solid transparent;
 }
 
-.cancel-btn:hover,
-.cancel-btn:focus {
+.back-btn:hover,
+.back-btn:focus {
 	color: olivedrab;
 	border: 1px solid olivedrab;
 }
