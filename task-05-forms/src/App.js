@@ -5,6 +5,7 @@ import "./App.css";
 import Form from "./Components/Form";
 import View from "./Components/View";
 import Popup from "./Components/Popup";
+import NotesList from "./Components/NotesList";
 
 class App extends Component {
 	state = {
@@ -16,7 +17,14 @@ class App extends Component {
 			message: "",
 		},
 		showPopup: false,
+		notes: [],
 	};
+
+	componentDidMount() {
+		fetch("//localhost:3001/notes")
+			.then((resp) => resp.json())
+			.then((data) => this.setState({ notes: data }));
+	}
 
 	inputHandler = (event) => {
 		let newForm = { ...this.state.form };
@@ -26,9 +34,6 @@ class App extends Component {
 
 	showPopupHandler = (event) => {
 		event.preventDefault();
-
-		// Validate form
-
 		this.setState({ showPopup: true });
 	};
 
@@ -50,6 +55,7 @@ class App extends Component {
 				<main>
 					<Form input={this.inputHandler} submit={this.showPopupHandler} />
 					<View {...props} />
+					<NotesList notes={this.state.notes} />
 				</main>
 				{this.state.showPopup && <Popup {...props} />}
 			</div>

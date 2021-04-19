@@ -5,9 +5,19 @@ section * + * {
 }
 
 main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	width: 100%;
-	max-width: 800px;
+	max-width: 1200px;
 	margin: 2rem auto;
+}
+
+section {
+	background-color: whitesmoke;
+	width: 100%;
+	max-width: 600px;
+	padding: 5%;
 }
 /******************* Form *******************/
 h1 {
@@ -58,7 +68,7 @@ label:first-child {
 /******************* View *******************/
 
 .view-container {
-	background-color: whitesmoke;
+	background-color: gainsboro;
 }
 
 .copybook {
@@ -92,6 +102,12 @@ label:first-child {
 	font-size: 1.5rem;
 }
 
+/******************* Form *******************/
+
+.notes-container {
+	max-width: none;
+}
+
 /******************* Popup *******************/
 
 .overlay {
@@ -109,7 +125,6 @@ label:first-child {
 	width: 100%;
 	min-width: 320px;
 	max-width: 800px;
-	background-color: whitesmoke;
 	padding: 3rem;
 }
 
@@ -132,4 +147,10 @@ label:first-child {
 .back-btn:focus {
 	color: olivedrab;
 	border: 1px solid olivedrab;
+}
+
+@media (max-width: 1200px) {
+	.notes-container {
+		max-width: 600px;
+	}
 }

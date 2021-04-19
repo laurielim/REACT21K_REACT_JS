@@ -13,10 +13,6 @@ body {
 	background-color: steelblue;
 }
 
-section {
-	padding: 5%;
-}
-
 button {
 	box-sizing: border-box;
 	cursor: pointer;
