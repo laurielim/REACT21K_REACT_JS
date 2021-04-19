@@ -37,28 +37,21 @@ class App extends Component {
 	};
 
 	render() {
+		const props = {
+			firstName: this.state.form.firstName,
+			lastName: this.state.form.lastName,
+			phoneNumber: this.state.form.phoneNumber,
+			role: this.state.form.role,
+			message: this.state.form.message,
+			backBtn: this.closePopupHandler,
+		};
 		return (
 			<div className='container'>
 				<main>
 					<Form input={this.inputHandler} submit={this.showPopupHandler} />
-					<View
-						firstName={this.state.form.firstName}
-						lastName={this.state.form.lastName}
-						phoneNumber={this.state.form.phoneNumber}
-						role={this.state.form.role}
-						message={this.state.form.message}
-					/>
+					<View {...props} />
 				</main>
-				{this.state.showPopup && (
-					<Popup
-						firstName={this.state.form.firstName}
-						lastName={this.state.form.lastName}
-						phoneNumber={this.state.form.phoneNumber}
-						role={this.state.form.role}
-						message={this.state.form.message}
-						backBtn={this.closePopupHandler}
-					/>
-				)}
+				{this.state.showPopup && <Popup {...props} />}
 			</div>
 		);
 	}

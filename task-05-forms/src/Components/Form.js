@@ -1,13 +1,13 @@
 import React from "react";
 
-const Form = (props) => {
+const Form = ({ submit, input }) => {
 	return (
 		<section className='form-container'>
 			<h1>Form Component</h1>
-			<form id='form' onSubmit={props.submit}>
+			<form id='form' onSubmit={submit}>
 				<label htmlFor='firstName'>First Name:</label>
 				<input
-					onChange={props.input}
+					onChange={input}
 					type='text'
 					id='firstName'
 					name='firstName'
@@ -18,7 +18,7 @@ const Form = (props) => {
 
 				<label htmlFor='lastName'>Last Name:</label>
 				<input
-					onChange={props.input}
+					onChange={input}
 					type='text'
 					id='lastName'
 					name='lastName'
@@ -27,9 +27,9 @@ const Form = (props) => {
 					aria-required='true'
 				/>
 
-				<label htmlFor='phoneNumber'>Phone Number</label>
+				<label htmlFor='phoneNumber'>Phone Number:</label>
 				<input
-					onChange={props.input}
+					onChange={input}
 					type='tel'
 					id='phoneNumber'
 					name='phoneNumber'
@@ -42,7 +42,7 @@ const Form = (props) => {
 				<label htmlFor='role'>Role:</label>
 
 				<select
-					onChange={props.input}
+					onChange={input}
 					name='role'
 					id='role'
 					form='form'
@@ -56,7 +56,7 @@ const Form = (props) => {
 
 				<label htmlFor='message'>Message:</label>
 				<textarea
-					onChange={props.input}
+					onChange={input}
 					name='message'
 					id='message'
 					placeholder='Write a message'
