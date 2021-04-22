@@ -9,7 +9,6 @@ const Popup = ({
 	backBtn,
 	submit,
 }) => {
-	const reloadApp = () => window.location.reload();
 	return (
 		<div className='overlay'>
 			<section className='popup-container'>

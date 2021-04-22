@@ -53,6 +53,8 @@ class App extends Component {
 		fetch("//localhost:3001/notes", requestOptions); */
 
 		axios.post(`//localhost:3001/notes`, this.state.form);
+
+		alert("Your Message was sent!");
 		window.location.reload();
 	};
 
