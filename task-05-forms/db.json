@@ -1,28 +1,52 @@
 {
-	"notes": [
-		{
-			"id": 1,
-			"firstName": "Severus",
-			"lastName": "Snape",
-			"phoneNumber": "9999666",
-			"message": "Always.",
-			"role": "Teacher"
-		},
-		{
-			"id": 2,
-			"firstName": "Albus",
-			"lastName": "Dumbledore",
-			"phoneNumber": "2255885",
-			"message": "It matters not what someone is born, but what they grow to be.",
-			"role": "Teacher"
-		},
-		{
-			"id": 3,
-			"firstName": "Ron",
-			"lastName": "Weasley",
-			"phoneNumber": "34654658",
-			"message": "Don’t let the Muggles get you down.",
-			"role": "Student"
-		}
-	]
+  "notes": [
+    {
+      "id": 1,
+      "firstName": "Severus",
+      "lastName": "Snape",
+      "phoneNumber": "9999666",
+      "message": "Always.",
+      "role": "Teacher"
+    },
+    {
+      "id": 2,
+      "firstName": "Albus",
+      "lastName": "Dumbledore",
+      "phoneNumber": "2255885",
+      "message": "It matters not what someone is born, but what they grow to be.",
+      "role": "Teacher"
+    },
+    {
+      "id": 3,
+      "firstName": "Ron",
+      "lastName": "Weasley",
+      "phoneNumber": "34654658",
+      "message": "Don’t let the Muggles get you down.",
+      "role": "Student"
+    },
+    {
+      "firstName": "Hermione",
+      "lastName": "Granger",
+      "phoneNumber": "04236687478",
+      "role": "Student",
+      "message": " We could all have been killed — or worse, expelled!",
+      "id": 4
+    },
+    {
+      "firstName": "Rubeus",
+      "lastName": "Hagrid",
+      "phoneNumber": "0457566876",
+      "role": "Teacher",
+      "message": "Yer a wizard Harry.",
+      "id": 5
+    },
+    {
+      "firstName": "Draco",
+      "lastName": "Malfoy",
+      "phoneNumber": "04 224233506",
+      "role": "Student",
+      "message": "Honestly, if you were any slower, you’d be going backward.",
+      "id": 6
+    }
+  ]
 }

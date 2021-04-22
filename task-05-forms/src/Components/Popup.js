@@ -7,6 +7,7 @@ const Popup = ({
 	role,
 	message,
 	backBtn,
+	submit,
 }) => {
 	const reloadApp = () => window.location.reload();
 	return (
@@ -19,7 +20,7 @@ const Popup = ({
 				<p>Role: {role}</p>
 				<p>Message: {message}</p>
 
-				<button type='submit' onClick={reloadApp} className='submit-btn'>
+				<button type='submit' onClick={submit} className='submit-btn'>
 					Send
 				</button>
 				<button

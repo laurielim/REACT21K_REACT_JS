@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 import "./App.css";
 
@@ -21,15 +22,16 @@ class App extends Component {
 	};
 
 	componentDidMount() {
-		fetch("//localhost:3001/notes")
-			.then((resp) => resp.json())
-			.then((data) => this.setState({ notes: data }));
+		axios
+			.get(`//localhost:3001/notes`)
+			// .then((resp) => resp.json())
+			.then((res) => this.setState({ notes: res.data }));
 	}
 
 	inputHandler = (event) => {
-		let newForm = { ...this.state.form };
-		newForm[event.target.id] = event.target.value;
-		this.setState({ form: newForm });
+		this.setState({
+			form: { ...this.state.form, [event.target.id]: event.target.value },
+		});
 	};
 
 	showPopupHandler = (event) => {
@@ -41,23 +43,34 @@ class App extends Component {
 		this.setState({ showPopup: false });
 	};
 
-	render() {
-		const props = {
-			firstName: this.state.form.firstName,
-			lastName: this.state.form.lastName,
-			phoneNumber: this.state.form.phoneNumber,
-			role: this.state.form.role,
-			message: this.state.form.message,
-			backBtn: this.closePopupHandler,
+	sendDataHandler = () => {
+		// request as in HTTP request
+		/* const requestOptions = {
+			method: "POST",
+			headers: { "content-type": "application/json" },
+			body: JSON.stringify(this.state.form),
 		};
+		fetch("//localhost:3001/notes", requestOptions); */
+
+		axios.post(`//localhost:3001/notes`, this.state.form);
+		window.location.reload();
+	};
+
+	render() {
 		return (
 			<div className='container'>
 				<main>
 					<Form input={this.inputHandler} submit={this.showPopupHandler} />
-					<View {...props} />
+					<View {...this.state.form} />
 					<NotesList notes={this.state.notes} />
 				</main>
-				{this.state.showPopup && <Popup {...props} />}
+				{this.state.showPopup && (
+					<Popup
+						{...this.state.form}
+						submit={this.sendDataHandler}
+						backBtn={this.closePopupHandler}
+					/>
+				)}
 			</div>
 		);
 	}

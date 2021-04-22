@@ -21,6 +21,7 @@ Inside a cloned directory/folder, run:
 
 ```bash
 npm install
+npm install axios
 ```
 
 ## Screenshots
@@ -36,6 +37,10 @@ npm install
 ### Popup Component
 
 ![Screenshot of App wPopup Component](./app_screenshots/popup-component.png)
+
+## Sources
+
+[How to create an accessible React modal by Seif Ghezala](https://medium.com/@seif_ghezala/how-to-create-an-accessible-react-modal-5b87e6a27503)
 
 ## Acknowledgment
 
