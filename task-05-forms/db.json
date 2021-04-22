@@ -47,6 +47,22 @@
       "role": "Student",
       "message": "Honestly, if you were any slower, you’d be going backward.",
       "id": 6
+    },
+    {
+      "firstName": "Harry",
+      "lastName": "Potter",
+      "phoneNumber": "0466868508",
+      "role": "Student",
+      "message": "Mischief Managed!",
+      "id": 7
+    },
+    {
+      "firstName": "Fred",
+      "lastName": "Weasley",
+      "phoneNumber": "243546787",
+      "role": "Student",
+      "message": "Anyone can speak Troll. All you have to do is point and grunt.",
+      "id": 8
     }
   ]
 }

@@ -23,9 +23,10 @@ class App extends Component {
 
 	componentDidMount() {
 		axios
-			.get(`//localhost:3001/notes`)
-			// .then((resp) => resp.json())
-			.then((res) => this.setState({ notes: res.data }));
+			// Working with local server
+			// .get(`//localhost:3001/notes`)
+			.get(`//murmuring-peak-15912.herokuapp.com`)
+			.then((res) => this.setState({ notes: res.data.notes }));
 	}
 
 	inputHandler = (event) => {
@@ -45,17 +46,17 @@ class App extends Component {
 
 	sendDataHandler = () => {
 		// request as in HTTP request
-		/* const requestOptions = {
+		const requestOptions = {
 			method: "POST",
 			headers: { "content-type": "application/json" },
 			body: JSON.stringify(this.state.form),
 		};
-		fetch("//localhost:3001/notes", requestOptions); */
+		fetch("//murmuring-peak-15912.herokuapp.com", requestOptions).then(
+			alert("Your Message was sent!", window.location.reload())
+		);
 
-		axios.post(`//localhost:3001/notes`, this.state.form);
-
-		alert("Your Message was sent!");
-		window.location.reload();
+		// Working with local server
+		// axios.post(`//localhost:3001/notes`, this.state.form);
 	};
 
 	render() {
