@@ -65,7 +65,13 @@ class App extends Component {
 				<main>
 					<Form input={this.inputHandler} submit={this.showPopupHandler} />
 					<View {...this.state.form} />
-					<NotesList notes={this.state.notes} />
+					{this.state.notes === [] ? (
+						<section className='notes-container'>
+							<h2>Loading...</h2>
+						</section>
+					) : (
+						<NotesList notes={this.state.notes} />
+					)}
 				</main>
 				{this.state.showPopup && (
 					<Popup
